@@ -16,22 +16,21 @@ export default {
   theme: {
     extend: {
       screens: {
-        sm: "335px",
-        md: "600px",
-        lg: "1000px",
-        xl: "1440px",
+        sm: "375px",
+        md: "768px",
+        lg: "1440px",
         dpr: {
           raw: "screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx)",
         },
       },
       fontFamily: {
-        jomolhari: ["Jomolhari", "serif"],
-        lato: ["Lato", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       colors: {
-        bg: "#141A19",
-        but: "#394014",
-        grey: "#5A5959",
+        bg: "#0C0B0B",
+        light: "#FAFAFA",
+        accent: "#4B50AD",
+        grey: "rgba(250, 250, 250, 0.30)",
       },
       fontSize: {
         12: ["12px", { lineHeight: "16.8px", letterSpacing: "0.12px" }],
