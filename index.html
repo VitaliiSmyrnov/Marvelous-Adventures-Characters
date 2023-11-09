@@ -2,13 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marvelous Adventures (characters)</title>
   </head>
-  <body>
-    {{>header}}
-    <div id="app"></div>
+  <body class="text-light bg-bg font-poppins font-normal">
+    <div class="mx-auto w-[375px] md:w-[768px] lg:w-[1440px]">
+      {{>header}}
+      <main>
+        <div id="app"></div>
+      </main>
+    </div>
     <script type="module" src="/src/ts/main.ts"></script>
   </body>
 </html>
