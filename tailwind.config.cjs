@@ -33,7 +33,8 @@ export default {
         grey: "rgba(250, 250, 250, 0.30)",
       },
       fontSize: {
-        12: ["12px", { lineHeight: "16.8px", letterSpacing: "0.12px" }],
+        12: ["12px", { lineHeight: "14px" }],
+        14: ["14px", { lineHeight: "18px" }],
       },
       backgroundImage: {
         mirror: "var(--bg-hero-mirror)",
