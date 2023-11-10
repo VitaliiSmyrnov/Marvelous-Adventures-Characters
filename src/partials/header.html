@@ -1,21 +1,49 @@
 <!-- Header  -->
 
 <header
-  class="absolute left-0 top-0 flex items-center justify-between px-[20px] pt-[20px] md:px-[32px] md:pt-[24px]"
+  class="absolute left-0 top-0 flex w-full items-center justify-between px-[20px] pt-[20px] md:px-[32px] md:pt-[24px]"
 >
-  <a href="index.html" class="inline-block"
-    ><img
-      src="svg/logo.svg"
-      alt="Logo"
-      width="98"
-      height="15"
-      class="h-[31px] w-[202px]"
-  /></a>
+  <a
+    href="index.html"
+    class="inline-block h-[16px] w-[98px] md:h-[32px] md:w-[202px]"
+  >
+    <picture>
+      <source
+        media="(max-width: 767px)"
+        srcset="
+          ./images/mob/mob-logo.png    1x,
+          ./images/mob/mob-logo@2x.png 2x,
+          ./images/mob/mob-logo@3x.png 3x
+        " />
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/tab/tab-logo.png    1x,
+          ./images/tab/tab-logo@2x.png 2x,
+          ./images/tab/tab-logo@3x.png 3x
+        " />
+      <img
+        src="./images/mob/mob-logo.png"
+        alt="Logo"
+        class="h-full w-full object-cover" /></picture
+  ></a>
 
-  <div>
+  <div class="relative">
     <input
       type="text"
-      class="flex h-[28px] w-[108px] items-center justify-center gap-[8px] rounded-[1000px] border border-solid border-grey bg-transparent px-[18px] py-[6px] outline-none md:h-[42px] md:w-[130px] md:px-[24px] md:py-[12px]"
+      placeholder="search"
+      class="md:text-14 placeholder:md:text-14 h-[28px] w-[108px] rounded-[1000px] border border-solid border-grey bg-transparent py-[6px] pl-[42px] pr-[17px] text-12 font-medium outline-none placeholder:text-12 placeholder:font-medium placeholder:uppercase placeholder:text-light md:h-[42px] md:w-[130px] md:py-[12px] md:pl-[50px] md:pr-[23px]"
     />
+    <svg
+      viewBox="0 0 16 16"
+      class="absolute left-[18px] top-[6px] h-4 w-4 stroke-current md:left-[24px] md:top-[12px]"
+    >
+      <path
+        d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667ZM14 14l-2.9-2.9"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
   </div>
 </header>
