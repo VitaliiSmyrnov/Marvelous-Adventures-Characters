@@ -29,12 +29,13 @@ export default {
       colors: {
         bg: "#0C0B0B",
         light: "#FAFAFA",
-        accent: "#4B50AD",
-        grey: "rgba(250, 250, 250, 0.30)",
+        accent: "#34387F",
       },
       fontSize: {
+        10: ["10px", { lineHeight: "12px", letterSpacing: "0.2px" }],
         12: ["12px", { lineHeight: "14px" }],
         14: ["14px", { lineHeight: "18px" }],
+        16: ["16px", { lineHeight: "18px" }],
       },
       backgroundImage: {
         mirror: "var(--bg-hero-mirror)",
