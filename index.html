@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,12 +7,13 @@
   </head>
   <body class="bg-bg font-poppins font-normal text-light">
     <div
-      class="relative mx-auto min-w-[320px] max-w-[375px] md:max-w-[768px] lg:max-w-[1440px]"
+      class="relative mx-auto flex min-h-screen min-w-[320px] max-w-[375px] flex-col md:max-w-[768px] lg:max-w-[1440px]"
     >
       {{>header}}
-      <main>
+      <main class="flex-auto">
         <div id="app"></div>
       </main>
+      {{>footer}}
     </div>
     <script type="module" src="/src/ts/main.ts"></script>
   </body>
