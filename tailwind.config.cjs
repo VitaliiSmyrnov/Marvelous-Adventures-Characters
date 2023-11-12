@@ -34,8 +34,12 @@ export default {
       fontSize: {
         10: ["10px", { lineHeight: "12px", letterSpacing: "0.2px" }],
         12: ["12px", { lineHeight: "14px" }],
+        "12L": ["12px", { lineHeight: "16px" }],
         14: ["14px", { lineHeight: "18px" }],
         16: ["16px", { lineHeight: "18px" }],
+        18: ["18px", { lineHeight: "28.8px" }],
+        44: ["44px", { lineHeight: "44px", letterSpacing: "-0.88px" }],
+        80: ["80px", { lineHeight: "80px", letterSpacing: "-1.6px" }],
       },
       backgroundImage: {
         mirror: "var(--bg-hero-mirror)",
