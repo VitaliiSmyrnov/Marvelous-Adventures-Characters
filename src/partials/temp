@@ -1,0 +1,13 @@
+  <body class="bg-bg font-poppins font-normal text-light">
+    <div
+      class="relative mx-auto flex min-h-screen min-w-[320px] max-w-[375px] flex-col md:max-w-[768px] lg:max-w-[1440px]"
+    >
+      {{>modal-character}} {{>header}}
+      <main class="flex-auto">
+        <div id="app"></div>
+        {{>characters}}
+      </main>
+      {{>footer}}
+    </div>
+    <script type="module" src="/src/ts/main.ts"></script>
+  </body>

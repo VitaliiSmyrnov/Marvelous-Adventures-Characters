@@ -31,85 +31,9 @@
   </div>
 </section>
 
-<section class="mt-[20px] px-[20px] md:mt-[64px] md:px-[32px] lg:px-[289px]">
-  <!-- <form
-    action="#"
-    class="flex flex-col gap-[12px] md:flex-row md:gap-[8px] lg:gap-[16px]"
-  >
-    <div class="relative order-1 md:w-[180px] lg:w-[268px]">
-      <label for="comics" class="text-12 opacity-30 md:text-14">Comics</label>
-      <input
-        type="text"
-        name="comics"
-        id="comics"
-        placeholder="Enter text"
-        class="focus:bg-input h-[46px] w-full rounded-[100px] bg-accent py-[12px] pl-[24px] pr-[46px] outline-none placeholder:text-14 placeholder:text-light focus:border-2 focus:border-accent md:h-[50px] md:py-[14px]"
-      />
-
-      <svg
-        viewBox="0 0 16 16"
-        class="absolute bottom-[14px] right-[24px] h-[18px] w-[18px] fill-transparent stroke-current md:bottom-[16px]"
-      >
-        <path
-          d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667ZM14 14l-2.9-2.9"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </div>
-
-    <div class="relative order-2 md:order-3 md:w-[180px] lg:w-[268px]">
-      <label for="character-name" class="text-12 opacity-30 md:text-14"
-        >Name Starts With</label
-      >
-      <input
-        type="text"
-        name="character-name"
-        id="character-name"
-        placeholder="Enter text"
-        class="bg-input h-[46px] w-full rounded-[100px] border-2 border-accent py-[12px] pl-[24px] pr-[46px] outline-none placeholder:text-14 placeholder:text-light md:h-[50px] md:py-[14px]"
-      />
-
-      <svg
-        viewBox="0 0 16 16"
-        class="absolute bottom-[14px] right-[24px] h-[18px] w-[18px] fill-transparent stroke-current md:bottom-[16px]"
-      >
-        <path
-          d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667ZM14 14l-2.9-2.9"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </div>
-
-    <div
-      class="order-3 inline-block w-[169px] md:order-2 md:w-[164px] lg:w-[185px]"
-    >
-      <label for="order" class="text-12 opacity-30 md:text-14">Order by</label>
-      <select
-        name="order"
-        id="order"
-        class="bg-input h-[46px] w-full rounded-[100px] border-2 border-accent py-[12px] pl-[24px] text-[14px] outline-none placeholder:text-light md:h-[50px] md:py-[14px] md:text-[16px]"
-      >
-        <option value="name" class="text-[14px] md:text-[16px]">Name</option>
-        <option value="modified" class="text-[14px] md:text-[16px]" selected>
-          Modified
-        </option>
-      </select>
-    </div>
-
-    <div class="order-4 inline-block w-[158px] md:w-[168px] lg:w-[170px]">
-      <label for="date" class="text-12 opacity-30 md:text-14">Date</label>
-      <input
-        type="date"
-        name="date"
-        id="date"
-        class="bg-input h-[46px] w-full rounded-[100px] border-2 border-accent py-[12px] pl-[24px] text-[14px] outline-none placeholder:text-light md:h-[50px] md:py-[14px] md:text-[16px]"
-      />
-    </div>
-  </form> -->
+<section
+  class="px-[20px] pb-[40px] pt-[20px] md:px-[32px] md:pb-[64px] md:pt-[64px] lg:px-[289px]"
+>
   <form
     action="#"
     class="grid grid-rows-3 gap-x-[8px] gap-y-[12px] sm:grid-cols-[169px,158px] md:grid-cols-[180px,164px,168px,168px] md:grid-rows-1 lg:grid-cols-[268px,185px,190px,170px] lg:gap-x-[16px] ss:grid-cols-[45%,55%]"
@@ -186,4 +110,70 @@
       />
     </div>
   </form>
+</section>
+
+<!-- Gallery  -->
+
+<section class="px-[20px] md:px-[32px]">
+  <div
+    class="grid grid-cols-1 grid-rows-5 gap-y-[35px] md:grid-cols-2 md:grid-rows-4 md:gap-x-[32px] md:gap-y-[32x] lg:grid-cols-4 lg:gap-x-[16px] lg:gap-y-[64px]"
+  >
+    <figure>
+      <img
+        src="./images/gallery-photo-1.jpg"
+        alt="Character photo"
+        loading="lazy"
+        class="h-auto w-full rounded object-cover"
+      />
+      <figcaption class="mt-[16px] text-18s font-medium">
+        Black Widow
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img
+        src="./images/gallery-photo-2.jpg"
+        alt="Character photo"
+        loading="lazy"
+        class="h-auto w-full rounded object-cover"
+      />
+      <figcaption class="mt-[16px] text-18s font-medium">Nebula</figcaption>
+    </figure>
+
+    <figure>
+      <img
+        src="./images/gallery-photo-3.jpg"
+        alt="Character photo"
+        loading="lazy"
+        class="h-auto w-full rounded object-cover"
+      />
+      <figcaption class="mt-[16px] text-18s font-medium">Maria Hill</figcaption>
+    </figure>
+
+    <figure>
+      <img
+        src="./images/gallery-photo-4.jpg"
+        alt="Character photo"
+        loading="lazy"
+        class="h-auto w-full rounded object-cover"
+      />
+      <figcaption class="mt-[16px] text-18s font-medium">Ajak</figcaption>
+    </figure>
+
+    <figure>
+      <img
+        src="./images/gallery-photo-5.jpg"
+        alt="Character photo"
+        loading="lazy"
+        class="h-auto w-full rounded object-cover"
+      />
+      <figcaption class="mt-[16px] text-18s font-medium">Attuma</figcaption>
+    </figure>
+  </div>
+
+  <!-- Pagination  -->
+
+  <div
+    class="flex items-center justify-center pb-[80px] pt-[40px] md:pb-[128px] md:pt-[64px]"
+  ></div>
 </section>
