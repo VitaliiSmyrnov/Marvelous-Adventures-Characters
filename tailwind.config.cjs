@@ -34,6 +34,7 @@ export default {
       colors: {
         bg: "#0C0B0B",
         light: "#FAFAFA",
+        "light-bg": "#171717",
         accent: "#34387F",
         input: "#171717",
         "accent-t": "#4B50AD",
@@ -44,6 +45,7 @@ export default {
         "12s": ["12px", { lineHeight: "14px", letterSpacing: "-0.24px" }],
         12: ["12px", { lineHeight: "14px" }],
         "12L": ["12px", { lineHeight: "16px" }],
+        "14s": ["14px", { lineHeight: "18px", letterSpacing: "-0.28px" }],
         14: ["14px", { lineHeight: "18px" }],
         16: ["16px", { lineHeight: "18px" }],
         "16L": ["16px", { lineHeight: "20px", letterSpacing: "0.32px" }],
