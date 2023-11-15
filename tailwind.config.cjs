@@ -41,6 +41,7 @@ export default {
         "grey-50": "rgba(250, 250, 250, 0.50)",
       },
       fontSize: {
+        "10s": ["10px", { lineHeight: "12px" }],
         10: ["10px", { lineHeight: "12px", letterSpacing: "0.2px" }],
         "12s": ["12px", { lineHeight: "14px", letterSpacing: "-0.24px" }],
         12: ["12px", { lineHeight: "14px" }],
