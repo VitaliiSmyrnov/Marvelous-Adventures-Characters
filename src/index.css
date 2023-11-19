@@ -4,8 +4,8 @@
   font-style: normal;
   font-weight: 400;
   src:
-    url("../fonts/poppins-v20-latin-regular.woff2") format("woff2"),
-    url("../fonts/poppins-v20-latin-regular.woff") format("woff");
+    url("src/assets/fonts/poppins-v20-latin-regular.woff2") format("woff2"),
+    url("src/assets/fonts/poppins-v20-latin-regular.woff") format("woff");
 }
 
 @font-face {
@@ -14,8 +14,8 @@
   font-style: normal;
   font-weight: 500;
   src:
-    url("../fonts/poppins-v20-latin-500.woff2") format("woff2"),
-    url("../fonts/poppins-v20-latin-500.woff") format("woff");
+    url("src/assets/fonts/poppins-v20-latin-500.woff2") format("woff2"),
+    url("src/assets/fonts/poppins-v20-latin-500.woff") format("woff");
 }
 
 @tailwind base;
@@ -29,6 +29,10 @@
       #34387f 36.46%,
       rgba(52, 56, 127, 0) 100%
     );
-    --bg-hero: linear-gradient(to right, #510301, #6d0401, #6B0202);
+    --bg-hero: linear-gradient(to right, #510301, #6d0401, #6b0202);
   }
+}
+
+.footer-social-link {
+  @apply inline-flex h-8 w-8 items-center justify-center rounded-md border border-solid border-light border-opacity-20 transition-all hover:border-accent md:h-10 md:w-10;
 }

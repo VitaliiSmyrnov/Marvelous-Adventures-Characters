@@ -5,10 +5,10 @@ import { Header, Footer } from "src/components";
 
 export const SharedLayout: React.FC = () => {
   return (
-    <div>
+    <div className="relative mx-auto flex min-h-screen min-w-[320px] max-w-[375px] flex-col md:max-w-[768px] lg:max-w-[1440px]">
       <Header />
 
-      <main>
+      <main className="flex-1">
         <Suspense fallback={<p>Loading...</p>}>
           <Outlet />
         </Suspense>
