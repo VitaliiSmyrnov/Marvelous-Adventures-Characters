@@ -10,12 +10,14 @@ const CharactersPage = lazy(
 
 const App: React.FC = () => {
   return (
-    <Routes>
-      <Route path="/" element={<SharedLayout />}>
-        <Route index element={<HomePage />} />
-        <Route path="characters" element={<CharactersPage />} />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="characters" element={<CharactersPage />} />
+        </Route>
+      </Routes>
+    </>
   );
 };
 
