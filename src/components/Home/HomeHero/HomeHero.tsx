@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Line } from "src/components/Icons";
+
 export const HomeHero: React.FC = () => {
   return (
     <section className="mb-[80px] flex flex-col gap-[40px] pl-[20px] pr-[20px] md:mb-[128px] md:gap-[32px] md:pl-[32px] md:pr-[32px] lg:flex-row lg:gap-[66px] lg:pr-0">
@@ -99,17 +101,7 @@ export const HomeHero: React.FC = () => {
             </picture>
           </div>
 
-          <svg
-            fill="none"
-            viewBox="0 0 190 6"
-            className="w-[190px] md:w-[336px] lg:w-[320px]"
-          >
-            <path
-              d="M5 2.5 0 .113v5.774L5 3.5v-1Zm180 1 5 2.387V.113L185 2.5v1ZM4.5 3.5h181v-1H4.5v1Z"
-              fill="#FAFAFA"
-              fill-opacity=".15"
-            />
-          </svg>
+          <Line className="w-[190px] md:w-[336px] lg:w-[320px]" />
 
           <div className="mt-[14px] flex w-[190px] justify-between md:w-[336px] lg:w-[320px]">
             <span className="text-12s">Characters</span>
