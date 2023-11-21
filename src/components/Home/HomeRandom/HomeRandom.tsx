@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const HomeRandom: React.FC = () => {
   return (
@@ -94,12 +95,12 @@ export const HomeRandom: React.FC = () => {
         </div>
       </div>
 
-      <a
-        href="#"
+      <Link
+        to="characters"
         className="inline-block w-[162px] self-end rounded-[1000px] border border-solid border-light border-opacity-30 bg-bg px-[20px] py-[10px] text-center text-12L font-medium uppercase md:w-[170px] md:px-[24px] md:py-[12px] md:text-14"
       >
         All Characters
-      </a>
+      </Link>
     </section>
   );
 };

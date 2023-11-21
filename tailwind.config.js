@@ -63,15 +63,22 @@ export default {
       },
       backgroundImage: {
         "back-panther": "var(--bg-back-panther)",
-        "hero-mob": "url('../images/mob/mob-hero.jpg'), var(--bg-hero)",
-        "hero-mob2x": "url('../images/mob/mob-hero@2x.jpg'), var(--bg-hero)",
-        "hero-mob3x": "url('../images/mob/mob-hero@3x.jpg'), var(--bg-hero)",
-        "hero-tab": "url('../images/tab/tab-hero.jpg'), var(--bg-hero)",
-        "hero-tab2x": "url('../images/tab/tab-hero@2x.jpg'), var(--bg-hero)",
-        "hero-tab3x": "url('../images/tab/tab-hero@3x.jpg'), var(--bg-hero)",
-        "hero-desk": "url('../images/desk/desk-hero.jpg'), var(--bg-hero)",
-        "hero-desk2x": "url('../images/desk/desk-hero@2x.jpg'), var(--bg-hero)",
-        "hero-desk3x": "url('../images/desk/desk-hero@3x.jpg'), var(--bg-hero)",
+        "hero-mob": "url('src/assets/images/mob/mob-hero.jpg'), var(--bg-hero)",
+        "hero-mob2x":
+          "url('src/assets/images/mob/mob-hero@2x.jpg'), var(--bg-hero)",
+        "hero-mob3x":
+          "url('src/assets/images/mob/mob-hero@3x.jpg'), var(--bg-hero)",
+        "hero-tab": "url('src/assets/images/tab/tab-her.jpg'), var(--bg-hero)",
+        "hero-tab2x":
+          "url('src/assets/images/tab/tab-her@2x.jpg'), var(--bg-hero)",
+        "hero-tab3x":
+          "url('src/assets/images/tab/tab-her@3x.jpg'), var(--bg-hero)",
+        "hero-desk":
+          "url('src/assets/images/desk/desk-hero.jpg'), var(--bg-hero)",
+        "hero-desk2x":
+          "url('src/assets/images/desk/desk-hero@2x.jpg'), var(--bg-hero)",
+        "hero-desk3x":
+          "url('src/assets/images/desk/desk-hero@3x.jpg'), var(--bg-hero)",
       },
     },
   },
