@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { Line } from "src/components/Icons";
 
@@ -19,12 +20,12 @@ export const HomeHero: React.FC = () => {
           our Characters and Comics sections and discover your new favorites
           today.
         </p>
-        <a
-          href="#"
+        <Link
+          to="characters"
           className="inline-block rounded-[1000px] bg-accent px-[20px] py-[10px] text-12L font-medium uppercase md:px-[24px] md:py-[12px] md:text-14"
         >
           All Characters
-        </a>
+        </Link>
       </div>
 
       <div className="flex flex-col gap-[20px] md:flex-row md:gap-[32px]">
