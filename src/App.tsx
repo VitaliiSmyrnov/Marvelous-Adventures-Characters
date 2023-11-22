@@ -3,10 +3,8 @@ import { Routes, Route } from "react-router-dom";
 
 import { SharedLayout } from "src/components";
 
-const HomePage = lazy(() => import("src/pages/HomePage/HomePage"));
-const CharactersPage = lazy(
-  () => import("src/pages/CharactersPage/CharactersPage"),
-);
+const HomePage = lazy(() => import("src/pages/HomePage"));
+const CharactersPage = lazy(() => import("src/pages/CharactersPage"));
 
 const App: React.FC = () => {
   return (
