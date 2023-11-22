@@ -1,7 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import API from "src/services/API.ts";
+
 export const HomeRandom: React.FC = () => {
+  // const [characters, setCharacters] = useState<ICharacters[]>([]);
+  const [status, setStatus] = useState("idle");
+  const [error, setError] = useState<null | string>(null);
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    (async () => {
+      setStatus("pending");
+
+      try {
+        const data = await API.getAllCharacters();
+        console.log("data", data);
+
+        // setCharacters(data);
+        setStatus("resolved");
+      } catch (e: unknown) {
+        if (e instanceof Error) {
+          setError(e.message);
+        }
+        setStatus("rejected");
+      }
+    })();
+
+    return () => {
+      controller.abort();
+    };
+  }, []);
+
   return (
     <section className="mb-[120px] flex flex-col px-[20px] md:mb-[192px] md:px-[32px]">
       <h2 className="mb-[44px] text-center text-28 font-medium uppercase md:mb-[64px] md:text-left md:text-44">
