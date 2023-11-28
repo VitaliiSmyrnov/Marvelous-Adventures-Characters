@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import API from "src/services/API.ts";
 
 export const HomeRandom: React.FC = () => {
-  const [characters, setCharacters] = useState<ICharacters[]>([]);
+  // const [characters, setCharacters] = useState<ICharacters[]>([]);
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState<null | string>(null);
 
@@ -17,7 +17,7 @@ export const HomeRandom: React.FC = () => {
       try {
         const data = await API.getAllCharacters();
 
-        setCharacters(data);
+        // setCharacters(data);
         setStatus("resolved");
       } catch (e: unknown) {
         if (e instanceof Error) {
