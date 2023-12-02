@@ -16,7 +16,7 @@ export const HomeRandom: React.FC = () => {
 
       try {
         const data = await API.getAllCharacters();
-
+        console.log("data", data);
         // setCharacters(data);
         setStatus("resolved");
       } catch (e: unknown) {
