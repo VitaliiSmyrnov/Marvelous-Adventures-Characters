@@ -10,7 +10,6 @@ axios.defaults.params = {
 
 const getAllCharacters = async () => {
   const response = await axios.get("/characters");
-
   return response.data.data.results;
 };
 
