@@ -68,11 +68,11 @@ export default {
           "url('src/assets/images/mob/mob-hero@2x.jpg'), var(--bg-hero)",
         "hero-mob3x":
           "url('src/assets/images/mob/mob-hero@3x.jpg'), var(--bg-hero)",
-        "hero-tab": "url('src/assets/images/tab/tab-her.jpg'), var(--bg-hero)",
+        "hero-tab": "url('src/assets/images/tab/tab-hero.jpg'), var(--bg-hero)",
         "hero-tab2x":
-          "url('src/assets/images/tab/tab-her@2x.jpg'), var(--bg-hero)",
+          "url('src/assets/images/tab/tab-hero@2x.jpg'), var(--bg-hero)",
         "hero-tab3x":
-          "url('src/assets/images/tab/tab-her@3x.jpg'), var(--bg-hero)",
+          "url('src/assets/images/tab/tab-hero@3x.jpg'), var(--bg-hero)",
         "hero-desk":
           "url('src/assets/images/desk/desk-hero.jpg'), var(--bg-hero)",
         "hero-desk2x":
