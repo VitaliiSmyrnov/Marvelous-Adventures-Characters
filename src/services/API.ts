@@ -13,4 +13,14 @@ const getAllCharacters = async () => {
   return response.data.data.results;
 };
 
-export default { getAllCharacters };
+const getOneCharacter = async (id: string) => {
+  const response = await axios.get(`/characters/${id}`);
+  return response.data.data.results;
+};
+
+const getAllComics = async () => {
+  const response = await axios.get("/comics");
+  return response.data.data.results;
+};
+
+export default { getAllCharacters, getAllComics, getOneCharacter };

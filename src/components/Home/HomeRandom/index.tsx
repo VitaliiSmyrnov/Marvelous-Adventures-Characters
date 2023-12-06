@@ -17,6 +17,12 @@ export const HomeRandom: React.FC = () => {
       try {
         const data = await API.getAllCharacters();
         console.log("data", data);
+
+        const comics = await API.getAllComics();
+        console.log("comics", comics);
+
+        const one_character = await API.getOneCharacter("1009149");
+
         // setCharacters(data);
         setStatus("resolved");
       } catch (e: unknown) {
