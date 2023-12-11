@@ -6,6 +6,8 @@ axios.defaults.params = {
   ts: import.meta.env.VITE_API_TS,
   hash: import.meta.env.VITE_API_HASH,
   limit: 8,
+  // modifiedSince: "2020-01-01",
+  // nameStartsWith: "Ant",
 };
 
 const getAllCharacters = async () => {

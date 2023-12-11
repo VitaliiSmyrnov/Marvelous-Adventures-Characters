@@ -3,8 +3,14 @@ import { Link } from "react-router-dom";
 
 import API from "src/services/API.ts";
 
+interface Picture {
+  path?: string;
+  extension?: string;
+}
+
 export const HomeRandom: React.FC = () => {
   // const [characters, setCharacters] = useState<ICharacters[]>([]);
+  const [picture, setPicture] = useState<Picture>({});
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState<null | string>(null);
 
@@ -22,6 +28,8 @@ export const HomeRandom: React.FC = () => {
         console.log("comics", comics);
 
         const one_character = await API.getOneCharacter("1009149");
+        console.log("one_character", one_character[0].thumbnail);
+        setPicture(one_character[0].thumbnail);
 
         // setCharacters(data);
         setStatus("resolved");
@@ -38,6 +46,7 @@ export const HomeRandom: React.FC = () => {
     };
   }, []);
 
+  console.log("picture", picture);
   return (
     <section className="mb-[120px] flex flex-col px-[20px] md:mb-[192px] md:px-[32px]">
       <h2 className="mb-[44px] text-center text-28 font-medium uppercase md:mb-[64px] md:text-left md:text-44">
@@ -46,7 +55,7 @@ export const HomeRandom: React.FC = () => {
 
       <div className="mb-[20px] md:mb-[32px] lg:flex lg:gap-[32px]">
         <div className="max-h-[335px] max-w-[335px] rounded md:max-h-[704px] md:max-w-[704px] lg:min-w-[496px] lg:max-w-[496px]">
-          <picture>
+          {/* <picture>
             <source
               media="(max-width: 767px)"
               srcSet="
@@ -77,7 +86,14 @@ export const HomeRandom: React.FC = () => {
               loading="lazy"
               className="h-full w-full rounded object-cover"
             />
-          </picture>
+          </picture> */}
+
+          <img
+            src={`${picture.path}.${picture.extension}`}
+            alt="Random character"
+            loading="lazy"
+            className="h-full w-full rounded object-cover"
+          />
         </div>
 
         <div>
