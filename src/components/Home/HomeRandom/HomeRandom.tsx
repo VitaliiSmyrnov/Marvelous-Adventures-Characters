@@ -3,14 +3,23 @@ import { Link } from "react-router-dom";
 
 import API from "src/services/API.ts";
 
-interface Picture {
-  path?: string;
-  extension?: string;
+// interface Picture {
+//   path?: string;
+//   extension?: string;
+// }
+
+interface ICharacters {
+  thumbnail: {
+    path: string;
+    extension: string;
+  };
+  name: string;
+  description: string;
 }
 
 export const HomeRandom: React.FC = () => {
-  // const [characters, setCharacters] = useState<ICharacters[]>([]);
-  const [picture, setPicture] = useState<Picture>({});
+  const [characters, setCharacters] = useState<ICharacters[]>([]);
+  // const [picture, setPicture] = useState<Picture>({});
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState<null | string>(null);
 
@@ -21,17 +30,10 @@ export const HomeRandom: React.FC = () => {
       setStatus("pending");
 
       try {
-        const data = await API.getAllCharacters();
-        console.log("data", data);
+        const randomCharacters = await API.getRandomCharacters();
+        console.log("randomCharacters", randomCharacters);
 
-        const comics = await API.getAllComics();
-        console.log("comics", comics);
-
-        const one_character = await API.getOneCharacter("1009149");
-        console.log("one_character", one_character[0].thumbnail);
-        setPicture(one_character[0].thumbnail);
-
-        // setCharacters(data);
+        setCharacters(randomCharacters);
         setStatus("resolved");
       } catch (e: unknown) {
         if (e instanceof Error) {
@@ -46,7 +48,6 @@ export const HomeRandom: React.FC = () => {
     };
   }, []);
 
-  console.log("picture", picture);
   return (
     <section className="mb-[120px] flex flex-col px-[20px] md:mb-[192px] md:px-[32px]">
       <h2 className="mb-[44px] text-center text-28 font-medium uppercase md:mb-[64px] md:text-left md:text-44">
@@ -89,7 +90,7 @@ export const HomeRandom: React.FC = () => {
           </picture> */}
 
           <img
-            src={`${picture.path}.${picture.extension}`}
+            src={`${characters[0].thumbnail.path}.${characters[0].thumbnail.extension}`}
             alt="Random character"
             loading="lazy"
             className="h-full w-full rounded object-cover"
