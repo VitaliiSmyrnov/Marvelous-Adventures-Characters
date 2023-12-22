@@ -5,9 +5,21 @@ axios.defaults.params = {
   apikey: import.meta.env.VITE_API_KEY,
   ts: import.meta.env.VITE_API_TS,
   hash: import.meta.env.VITE_API_HASH,
-  limit: 100,
+  // limit: 100,
   // modifiedSince: "2020-01-01",
   // nameStartsWith: "Ant",
+};
+
+const getRandomCharacters = async () => {
+  const response = await axios.get("/characters", {
+    params: {
+      offset: Math.floor(Math.random() * 1563),
+      limit: 100,
+      orderBy: "modified",
+    },
+  });
+  console.log("response", response);
+  return response.data.data.results;
 };
 
 const getAllCharacters = async () => {
@@ -25,4 +37,9 @@ const getAllComics = async () => {
   return response.data.data.results;
 };
 
-export default { getAllCharacters, getAllComics, getOneCharacter };
+export default {
+  getRandomCharacters,
+  getAllCharacters,
+  getAllComics,
+  getOneCharacter,
+};
