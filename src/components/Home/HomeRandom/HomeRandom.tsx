@@ -3,11 +3,6 @@ import { Link } from "react-router-dom";
 
 import API from "src/services/API.ts";
 
-// interface Picture {
-//   path?: string;
-//   extension?: string;
-// }
-
 interface ICharacters {
   thumbnail: {
     path: string;
