@@ -9,16 +9,19 @@ axios.defaults.params = {
   // modifiedSince: "2020-01-01",
   // nameStartsWith: "Ant",
 };
+// axios.defaults.headers = {
+//   "Accept-Encoding": "gzip",
+// };
 
 const getRandomCharacters = async () => {
   const response = await axios.get("/characters", {
     params: {
-      offset: Math.floor(Math.random() * 1563),
+      offset: Math.floor(Math.random() * 1463),
       limit: 100,
       orderBy: "modified",
     },
   });
-  console.log("response", response);
+
   return response.data.data.results;
 };
 
