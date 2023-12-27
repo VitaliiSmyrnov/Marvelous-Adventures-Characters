@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import API from "src/services/API.ts";
+import { HomeRandomList } from "./HomeRandomList/HomeRandomList";
+import { ICharacters } from "src/modules/IProps";
 
-interface ICharacters {
-  thumbnail: {
-    path: string;
-    extension: string;
-  };
-  name: string;
-  description: string;
-}
+import API from "src/services/API.ts";
 
 export const HomeRandom: React.FC = () => {
   const [characters, setCharacters] = useState<ICharacters[]>([]);
@@ -31,7 +25,7 @@ export const HomeRandom: React.FC = () => {
           .filter(
             (item: ICharacters) =>
               item.thumbnail.path.includes("image_not_available") !== true &&
-              item.description !== "",
+              item.description.trim() !== "",
           )
           .slice(0, 5);
         console.log("preparedCharacters", preparedCharacters);
@@ -66,59 +60,60 @@ export const HomeRandom: React.FC = () => {
               src={`${characters[0].thumbnail.path}.${characters[0].thumbnail.extension}`}
               alt="Random character"
               loading="lazy"
-              className="h-full w-full rounded object-cover"
+              className="h-full max-h-full w-full max-w-full rounded object-cover"
             />
           </div>
 
-          <div>
-            <div className="border-b border-light border-opacity-20 py-[32px] lg:py-0 lg:pb-[32px] lg:pt-[45px]">
-              <h3 className="text-18s font-medium text-accent-t md:text-24">
-                Ant-Man
-              </h3>
-              <p className="mt-[14px] text-14 text-accent-t md:mt-[16px] md:text-16">
-                Thief turned hero Scott Lang uses size manipulation tech to
-                infiltrate bases and intimidate bad guys.
-              </p>
-            </div>
+          <HomeRandomList items={characters} />
+          {/* <ul>
+              <div className="border-b border-light border-opacity-20 py-[32px]">
+                <h3 className="text-18s font-medium text-accent-t md:text-24">
+                  Ant-Man
+                </h3>
+                <p className="mt-[14px] text-14 text-accent-t md:mt-[16px] md:text-16">
+                  Thief turned hero Scott Lang uses size manipulation tech to
+                  infiltrate bases and intimidate bad guys.
+                </p>
+              </div>
 
-            <div className="border-b border-light border-opacity-20 py-[32px]">
-              <h3 className="text-18s font-medium md:text-24">The Wasp</h3>
-              <p className="mt-[14px] text-14 text-grey-50 md:mt-[16px] md:text-16">
-                Hope Van Dyne, daughter of the brilliant and heroic Ant-Man
-                (Hank Pym) and The Wasp (Janet van Dyne), helps trains her
-                father’s successor Scott Lang and secure the destruction of the
-                Yellowjacket technology.
-              </p>
-            </div>
+              <div className="border-b border-light border-opacity-20 py-[32px]">
+                <h3 className="text-18s font-medium md:text-24">The Wasp</h3>
+                <p className="mt-[14px] text-14 text-grey-50 md:mt-[16px] md:text-16">
+                  Hope Van Dyne, daughter of the brilliant and heroic Ant-Man
+                  (Hank Pym) and The Wasp (Janet van Dyne), helps trains her
+                  father’s successor Scott Lang and secure the destruction of
+                  the Yellowjacket technology.
+                </p>
+              </div>
 
-            <div className="border-b border-light border-opacity-20 py-[32px]">
-              <h3 className="text-18s font-medium md:text-24">Cassie Lang</h3>
-              <p className="mt-[14px] text-14 text-grey-50 md:mt-[16px] md:text-16">
-                As Scott Lang’s young daughter, Cassie is super proud of her
-                dad’s heroics as Ant-Man.
-              </p>
-            </div>
+              <div className="border-b border-light border-opacity-20 py-[32px]">
+                <h3 className="text-18s font-medium md:text-24">Cassie Lang</h3>
+                <p className="mt-[14px] text-14 text-grey-50 md:mt-[16px] md:text-16">
+                  As Scott Lang’s young daughter, Cassie is super proud of her
+                  dad’s heroics as Ant-Man.
+                </p>
+              </div>
 
-            <div className="border-b border-light border-opacity-20 py-[32px]">
-              <h3 className="text-18s font-medium md:text-24">
-                Kang The Conqueror
-              </h3>
-              <p className="mt-[14px] text-14 text-grey-50 md:mt-[16px] md:text-16">
-                The character is most frequently depicted as an opponent of the
-                Avengers and the Fantastic Four.
-              </p>
-            </div>
+              <div className="border-b border-light border-opacity-20 py-[32px]">
+                <h3 className="text-18s font-medium md:text-24">
+                  Kang The Conqueror
+                </h3>
+                <p className="mt-[14px] text-14 text-grey-50 md:mt-[16px] md:text-16">
+                  The character is most frequently depicted as an opponent of
+                  the Avengers and the Fantastic Four.
+                </p>
+              </div>
 
-            <div className="border-b border-light border-opacity-20 py-[32px]">
-              <h3 className="text-18s font-medium md:text-24">Hank Pym</h3>
-              <p className="mt-[14px] text-14 text-grey-50 md:mt-[16px] md:text-16">
-                Hank Pym is a brilliant scientist who used his discovery of the
-                shrinking Pym Particles, the suit that could survive the
-                process, and insect communication waves, to turn himself into
-                the original Ant-Man.
-              </p>
-            </div>
-          </div>
+              <div className="border-b border-light border-opacity-20 py-[32px]">
+                <h3 className="text-18s font-medium md:text-24">Hank Pym</h3>
+                <p className="mt-[14px] text-14 text-grey-50 md:mt-[16px] md:text-16">
+                  Hank Pym is a brilliant scientist who used his discovery of
+                  the shrinking Pym Particles, the suit that could survive the
+                  process, and insect communication waves, to turn himself into
+                  the original Ant-Man.
+                </p>
+              </div>
+            </ul> */}
         </div>
       )}
 
