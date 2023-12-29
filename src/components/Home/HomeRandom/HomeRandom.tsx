@@ -46,6 +46,12 @@ export const HomeRandom: FC = () => {
     };
   }, []);
 
+  const handleRandomImage = (idx: number) => {
+    if (idx === activeIdx) return;
+
+    setActiveIdx(idx);
+  };
+
   return (
     <section className="mb-[80px] flex flex-col px-[20px] md:mb-[128px] md:px-[32px]">
       <h2 className="mb-[44px] text-center text-28 font-medium uppercase md:mb-[64px] md:text-left md:text-44">
@@ -58,7 +64,10 @@ export const HomeRandom: FC = () => {
         <div className="mb-[20px] md:mb-[32px] lg:flex lg:gap-[32px]">
           <HomeRandomImage items={characters} idx={activeIdx} />
 
-          <HomeRandomList items={characters} />
+          <HomeRandomList
+            items={characters}
+            onImageChange={handleRandomImage}
+          />
         </div>
       )}
 
