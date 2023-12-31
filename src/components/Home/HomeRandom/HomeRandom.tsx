@@ -16,11 +16,14 @@ export const HomeRandom: FC = () => {
   useEffect(() => {
     const controller = new AbortController();
 
+    console.log("controller.signal", controller.signal);
     (async () => {
       setStatus("pending");
 
       try {
-        const randomCharacters = await API.getRandomCharacters();
+        const randomCharacters = await API.getRandomCharacters(
+          controller.signal,
+        );
         console.log("randomCharacters", randomCharacters);
         const preparedCharacters = randomCharacters
           .filter(
