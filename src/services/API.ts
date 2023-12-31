@@ -13,13 +13,18 @@ axios.defaults.params = {
 //   "Accept-Encoding": "gzip",
 // };
 
-const getRandomCharacters = async () => {
+type IAbort = {
+  aborted: true | false;
+};
+
+const getRandomCharacters = async (abort: IAbort) => {
   const response = await axios.get("/characters", {
     params: {
       offset: Math.floor(Math.random() * 1463),
       limit: 100,
       orderBy: "modified",
     },
+    signal: abort,
   });
 
   return response.data.data.results;
