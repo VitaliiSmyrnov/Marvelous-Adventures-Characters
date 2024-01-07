@@ -3,11 +3,11 @@ import { ICharacters } from "src/modules/IProps";
 
 interface IProps {
   items: ICharacters[];
-  idx: number;
 }
 
-export const HomeRandomImage: FC<IProps> = ({ items, idx }) => {
-  const { path, extension } = items[idx].thumbnail;
+export const HomeRandomImage: FC<IProps> = ({ items }) => {
+  const activeCharacter = items.find((item) => item.isActive)!;
+  const { path, extension } = activeCharacter.thumbnail;
 
   return (
     <div className="max-h-[335px] max-w-[335px] rounded md:max-h-[704px] md:max-w-[704px] lg:min-w-[496px] lg:max-w-[496px]">

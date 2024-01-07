@@ -9,7 +9,6 @@ import API from "src/services/API.ts";
 
 export const HomeRandom: FC = () => {
   const [characters, setCharacters] = useState<ICharacters[]>([]);
-  const [activeIdx, setActiveIdx] = useState(0);
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState<null | string>(null);
 
@@ -31,7 +30,11 @@ export const HomeRandom: FC = () => {
               item.thumbnail.path.includes("image_not_available") !== true &&
               item.description.trim() !== "",
           )
-          .slice(0, 5);
+          .slice(0, 5)
+          .map((character: ICharacters, idx: number) => ({
+            ...character,
+            isActive: idx === 0,
+          }));
         console.log("preparedCharacters", preparedCharacters);
 
         setCharacters(preparedCharacters);
@@ -49,10 +52,16 @@ export const HomeRandom: FC = () => {
     };
   }, []);
 
-  const handleRandomImage = (idx: number) => {
-    if (idx === activeIdx) return;
+  const handleCharacterChange = (id: number) => {
+    const activeCharacter = characters.find((item) => item.isActive)!;
+    if (id === activeCharacter.id) return;
 
-    setActiveIdx(idx);
+    setCharacters((prev) =>
+      prev.map((item) => ({
+        ...item,
+        isActive: item.id === id,
+      })),
+    );
   };
 
   return (
@@ -64,12 +73,12 @@ export const HomeRandom: FC = () => {
       {status === "pending" && <p>Loading</p>}
       {status === "rejected" && <p>Oops, something wrong. {error} </p>}
       {status === "resolved" && (
-        <div className="mb-[20px] md:mb-[32px] lg:flex lg:gap-[32px]">
-          <HomeRandomImage items={characters} idx={activeIdx} />
+        <div className="mb-[20px] flex-col gap-0 md:mb-[32px] lg:flex lg:gap-[32px]">
+          <HomeRandomImage items={characters} />
 
           <HomeRandomList
             items={characters}
-            onImageChange={handleRandomImage}
+            onCharacterChange={handleCharacterChange}
           />
         </div>
       )}

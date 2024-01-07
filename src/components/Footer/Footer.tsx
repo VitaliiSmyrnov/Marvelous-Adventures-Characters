@@ -1,9 +1,9 @@
-import React from "react";
+import { FC } from "react";
 import { Link } from "react-router-dom";
 
 import { Logo, Facebook, Instagram, Twitter } from "src/components/Icons";
 
-export const Footer: React.FC = () => {
+export const Footer: FC = () => {
   return (
     <footer>
       <div className="flex flex-wrap items-center justify-between gap-y-[20px] px-[20px] py-[40px] md:px-[32px] md:py-[64px] lg:px-[64px]">
