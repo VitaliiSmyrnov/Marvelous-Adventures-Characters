@@ -10,30 +10,39 @@ export const Footer: FC = () => {
         <Link
           to="/"
           className="inline-block h-[16px] w-[98px] md:h-[32px] md:w-[202px]"
+          aria-label="Logo"
         >
           <Logo className="h-[16px] w-[98px] md:h-[32px] md:w-[202px]" />
-          <span className="sr-only">Logo</span>
         </Link>
 
         <span className="text-14 text-light md:text-16">Characters</span>
 
         <ul className="flex flex-1 basis-full gap-[14px] md:flex-shrink-0 md:flex-grow-0 md:basis-auto md:gap-[16px]">
           <li>
-            <a href="#" className="footer-social-link group">
+            <a
+              href="#"
+              className="footer-social-link group"
+              aria-label="Facebook"
+            >
               <Facebook className="h-4 w-4 fill-current transition-all group-hover:fill-accent md:h-5 md:w-5" />
-              <span className="sr-only">Facebook</span>
             </a>
           </li>
           <li>
-            <a href="#" className="footer-social-link group">
+            <a
+              href="#"
+              className="footer-social-link group"
+              aria-label="Instagram"
+            >
               <Instagram className="h-4 w-4 fill-current transition-all group-hover:fill-accent md:h-5 md:w-5" />
-              <span className="sr-only">Instagram</span>
             </a>
           </li>
           <li>
-            <a href="#" className="footer-social-link group">
+            <a
+              href="#"
+              className="footer-social-link group"
+              aria-label="Twitter"
+            >
               <Twitter className="h-4 w-4 fill-current transition-all group-hover:fill-accent md:h-5 md:w-5" />
-              <span className="sr-only">Twitter</span>
             </a>
           </li>
         </ul>
