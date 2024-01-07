@@ -4,15 +4,24 @@ import { ICharacters } from "src/modules/IProps";
 
 interface IProps {
   items: ICharacters[];
-  onImageChange: (id: number) => void;
+  onCharacterChange: (id: number) => void;
 }
 
-export const HomeRandomList: React.FC<IProps> = ({ items, onImageChange }) => {
+export const HomeRandomList: React.FC<IProps> = ({
+  items,
+  onCharacterChange,
+}) => {
   return (
     <ul>
-      {items.map(({ name, description, id }, idx) => {
+      {items.map(({ name, description, isActive, id }) => {
         return (
-          <HomeRandomItem key={id} name={name} description={description} onImageChange={()=> onImageChange(idx)}/>
+          <HomeRandomItem
+            key={id}
+            name={name}
+            description={description}
+            isActive={isActive}
+            onCharacterChange={() => onCharacterChange(id)}
+          />
         );
       })}
     </ul>

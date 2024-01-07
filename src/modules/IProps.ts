@@ -12,4 +12,5 @@ export interface ICharacters {
   name: string;
   description: string;
   id: number;
+  isActive: boolean;
 }
