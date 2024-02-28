@@ -28,7 +28,8 @@ export const HomeRandom: FC = () => {
           .filter(
             (item: ICharacters) =>
               item.thumbnail.path.includes("image_not_available") !== true &&
-              item.description.trim() !== "",
+              item.description.trim() !== "" &&
+              item.description.trim() !== "&nbsp;",
           )
           .slice(0, 5)
           .map((character: ICharacters, idx: number) => ({
