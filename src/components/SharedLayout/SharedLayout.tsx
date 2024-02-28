@@ -1,9 +1,9 @@
-import React, { Suspense } from "react";
+import { FC, Suspense } from "react";
 import { Outlet } from "react-router-dom";
 
 import { Header, Footer } from "src/components";
 
-export const SharedLayout: React.FC = () => {
+export const SharedLayout: FC = () => {
   return (
     <div className="relative mx-auto flex min-h-screen min-w-[320px] max-w-[375px] flex-col md:max-w-[768px] lg:max-w-[1440px]">
       <Header />

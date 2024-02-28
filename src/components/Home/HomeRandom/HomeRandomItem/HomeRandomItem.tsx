@@ -4,18 +4,18 @@ type IProps = {
   name: string;
   description: string;
   isActive: boolean;
-  onCharacterChange: () => void;
+  // onCharacterChange: () => void;
 };
 
 export const HomeRandomItem: FC<IProps> = ({
   name,
   description,
   isActive,
-  onCharacterChange,
+  // onCharacterChange,
 }) => {
   return (
     <li
-      onClick={onCharacterChange}
+      // onClick={onCharacterChange}
       className="border-b border-light border-opacity-20 py-[32px]"
     >
       <h3

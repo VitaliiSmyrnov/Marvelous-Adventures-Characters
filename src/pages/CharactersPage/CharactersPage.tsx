@@ -1,8 +1,8 @@
-import React from "react";
+import { FC } from "react";
 
 import { Characters } from "src/components";
 
-const CharactersPage: React.FC = () => {
+const CharactersPage: FC = () => {
   return <Characters />;
 };
 

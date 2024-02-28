@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { IconProps } from "src/modules/IProps";
 
-export const Logo: FC<IconProps> = (props) => (
+export const LogoIcon: FC<IconProps> = (props) => (
   <svg fill="none" viewBox="0 0 98 16" {...props}>
     <path fill="#ED1D24" d="M0 .5h47v15H0V.5Z" />
     <path
