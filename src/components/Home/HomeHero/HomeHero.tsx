@@ -1,9 +1,9 @@
-import React from "react";
+import { FC } from "react";
 import { Link } from "react-router-dom";
 
-import { Line } from "src/components/Icons";
+import { LineIcon } from "src/components/Icons";
 
-export const HomeHero: React.FC = () => {
+export const HomeHero: FC = () => {
   return (
     <section className="mb-[80px] flex flex-col gap-[40px] pl-[20px] pr-[20px] md:mb-[128px] md:gap-[32px] md:pl-[32px] md:pr-[32px] lg:flex-row lg:gap-[66px] lg:pr-0">
       <div className="pt-[92px] md:pt-[146px] lg:pt-[210px]">
@@ -102,7 +102,7 @@ export const HomeHero: React.FC = () => {
             </picture>
           </div>
 
-          <Line className="w-[190px] md:w-[336px] lg:w-[320px]" />
+          <LineIcon className="w-[190px] md:w-[336px] lg:w-[320px]" />
 
           <div className="mt-[14px] flex w-[190px] justify-between md:w-[336px] lg:w-[320px]">
             <span className="text-12s">Characters</span>

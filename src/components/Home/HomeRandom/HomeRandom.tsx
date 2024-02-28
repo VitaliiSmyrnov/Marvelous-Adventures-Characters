@@ -52,14 +52,27 @@ export const HomeRandom: FC = () => {
     };
   }, []);
 
-  const handleCharacterChange = (id: number) => {
-    const activeCharacter = characters.find((item) => item.isActive)!;
-    if (id === activeCharacter.id) return;
+  // const handleCharacterChange = (id: number) => {
+  //   const activeCharacter = characters.find((item) => item.isActive)!;
+  //   if (id === activeCharacter.id) return;
 
-    setCharacters((prev) =>
-      prev.map((item) => ({
+  //   setCharacters((prev) =>
+  //     prev.map((item) => ({
+  //       ...item,
+  //       isActive: item.id === id,
+  //     })),
+  //   );
+  // };
+  console.log("activeCharacter", characters);
+
+  const changeActiveCharacter = () => {
+    const activeCharacterIdx = characters.findIndex((item) => item.isActive)!;
+    const nextCharacterIdx = (activeCharacterIdx + 1) % characters.length;
+
+    setCharacters(
+      characters.map((item, idx) => ({
         ...item,
-        isActive: item.id === id,
+        isActive: idx === nextCharacterIdx,
       })),
     );
   };
@@ -73,12 +86,13 @@ export const HomeRandom: FC = () => {
       {status === "pending" && <p>Loading</p>}
       {status === "rejected" && <p>Oops, something wrong. {error} </p>}
       {status === "resolved" && (
-        <div className="mb-[20px] flex-col gap-0 md:mb-[32px] lg:flex lg:gap-[32px]">
+        <div className="mb-[20px] flex flex-col gap-0 md:mb-[32px] lg:flex-row lg:gap-[32px]">
           <HomeRandomImage items={characters} />
 
           <HomeRandomList
             items={characters}
-            onCharacterChange={handleCharacterChange}
+            // onCharacterChange={handleCharacterChange}
+            onCharacterChange={changeActiveCharacter}
           />
         </div>
       )}
