@@ -2,7 +2,7 @@ import React from "react";
 
 export const CharactersForm: React.FC = () => {
   return (
-    <section className="px-[20px] pb-[40px] pt-[20px] md:px-[32px] md:pb-[64px] md:pt-[64px] lg:px-[289px]">
+    <section id="charactersForm" className="px-[20px] pb-[40px] pt-[20px] md:px-[32px] md:pb-[64px] md:pt-[64px] lg:px-[289px]">
       <form
         action="#"
         className="grid grid-rows-3 gap-x-[8px] gap-y-[12px] sm:grid-cols-[169px,158px] md:grid-cols-[180px,164px,168px,168px] md:grid-rows-1 lg:grid-cols-[268px,185px,190px,170px] lg:gap-x-[16px] ss:grid-cols-[45%,55%]"
