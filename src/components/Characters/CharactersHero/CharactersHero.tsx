@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import scrollDown from "src/assets/images/scroll-down.gif";
+
 export const CharactersHero: React.FC = () => {
   return (
-    <section>
+    <section className="relative">
       <div className="flex h-[509px] flex-col bg-hero-mob bg-cover bg-center bg-no-repeat px-[20px] md:h-[780px] md:bg-hero-tab md:px-[32px] lg:bg-hero-desk dpr2:bg-hero-mob2x md:dpr2:bg-hero-tab2x lg:dpr2:bg-hero-desk2x dpr3:bg-hero-mob3x md:dpr3:bg-hero-tab3x lg:dpr3:bg-hero-desk3x">
         <p className="pt-[220px] text-14 uppercase text-white/70 md:pt-[278px] md:text-18">
           Web-based platform
@@ -24,6 +26,13 @@ export const CharactersHero: React.FC = () => {
         >
           Back home
         </Link>
+
+        <a
+          href="#charactersForm"
+          className="absolute bottom-7 left-7 h-[40px] w-[40px]"
+        >
+          <img src={`${scrollDown}`} alt="scroll down" title="scroll down" />
+        </a>
       </div>
     </section>
   );
